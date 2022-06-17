@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <!--this is custom font for the logo but it will default to a normal font
+    in case the custom font is unreachable-->
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
+    </script>
+    <script src="index.js"></script>
+    <title>ezphone</title>
+</head>
+<body>
+    <header>
+        <span id="logo_text">ezphone</span>
+        <nav>
+            <a href="#best_sellers">Best sellers</a>
+            <a href="#buyers_guide">Buyer's guide</a>
+            <a href="#alternatives">Alternatives</a>
+            <a href="#accesories">Accesories</a>
+            <a href="#glossary">Glossary</a>
+        </nav>
+    </header>
+    <div id="background-container"></div>
+    <section id="best_sellers">
+        <h1>Best sellers</h1>
+        <ul id="best_seller_list">
+            <li tabindex="0">
+                <figure>
+                    <img src="https://tweakers.net/i/PODBSSuC2QETRAce5Pkn6TKo0DM=/fit-in/188x141/filters:fill(white):strip_exif()/i/2004606044.png?f=thumblarge">
+                    <figcaption>Apple iPhone 13</figcaption>
+                </figure>
+                <a class="buy-button" href="https://www.google.com/search?q=iphone+13&sxsrf=AOaemvKOYXvZFafk3tS9Pm_zqKKx0ssZfg%3A1642082542755&source=hp&ei=7jDgYdLQKs7UsAea5rT4Dg&iflsig=ALs-wAMAAAAAYeA-_oAFrpaUa-EQOROfVtim2RpHjPq4&ved=0ahUKEwjS_5iV8q71AhVOKuwKHRozDe8Q4dUDCAc&uact=5&oq=iphone+13&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLAToHCCMQ6gIQJzoLCC4QgAQQxwEQowI6BQgAEIAEOgQIABBDUKgIWOAeYN8gaAFwAHgAgAFciAGyBJIBATmYAQCgAQGwAQo&sclient=gws-wiz">Buy now!</a>
+            </li>
+            <li tabindex="0">
+                <figure>
+                    <img src="https://tweakers.net/i/UCEo-k_-xYVX6BdSTdy3Fx0w4CI=/fit-in/188x141/filters:sharpen(0.5,0.1,false):fill(white):strip_exif()/i/2004712680.webp?f=thumblarge">
+                    <figcaption>Google Pixel 6</figcaption>
+                </figure>
+                <a class="buy-button" href="https://www.google.com/search?q=google+pixel+6&sxsrf=AOaemvIOKPNmR3ZSHF_NPkwJ1rhYRVMzHQ%3A1642082679324&ei=dzHgYZ-fE4WakwX3iaeIDw&oq=google+&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIECCMQJzIECCMQJzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIKCC4QxwEQ0QMQQzIECAAQQzIECAAQQzoLCC4QgAQQxwEQ0QM6BQgAEIAESgQIQRgASgQIRhgAUABY6AVgjxFoAHACeACAAUOIAZ4DkgEBN5gBAKABAcABAQ&sclient=gws-wiz" >Buy now!</a>
+            </li>
+            <li tabindex="0">
+                <figure>
+                    <img src="https://tweakers.net/i/_g2fleTdB9RNl7-ZqjUZAgAAxMo=/fit-in/188x141/filters:strip_icc():fill(white):strip_exif()/i/2003768498.jpeg?f=thumblarge">
+                    <figcaption>Samsung Galaxy Note 20</figcaption>
+                </figure>
+                <a class="buy-button" href="https://www.google.com/search?q=samsung+galaxy+note+20&sxsrf=AOaemvJMdZqqjUfKSBagONX_PZ2RiYnEsQ%3A1642082743433&ei=tzHgYa38GdDSkgW2t7zIBQ&ved=0ahUKEwjts_T08q71AhVQqaQKHbYbD1kQ4dUDCA4&uact=5&oq=samsung+galaxy+note+20&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyBAgAEEMyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLAToHCCMQsAMQJzoHCAAQRxCwAzoKCAAQRxCwAxDJAzoICAAQkgMQsAM6BwgAELADEEM6CAgAEOQCELADOhAILhDHARDRAxDIAxCwAxBDOhAILhDHARCjAhDIAxCwAxBDOgQIIxAnSgQIQRgASgQIRhgBUIEKWJAtYO4vaAJwAngAgAFviAGmC5IBBDIwLjKYAQCgAQHIARHAAQE&sclient=gws-wiz">Buy now!</a>
+            </li>
+        </ul>
+        <h2>Specifications</h2>
+        <form id="phone_form" action="https://wt.ops.labs.vu.nl/api22/edcea431" method="post">
+            <table id="specification_table">
+                <caption>
+                    <p>The Specifications of the current best selling phones</p>
+                </caption>
+                <tr>
+                    <th sortable="yes" tabindex="0">Brand</th>
+                    <th sortable="yes" tabindex="0">Model</th>
+                    <th sortable="yes" tabindex="0">OS</th>
+                    <th sortable="yes" data-type="number" tabindex="0">Screen Size</th>
+                    <th>Image</th>
+                    <th></th>
+                </tr>
+                <tr id="form_row">
+                    <td>
+                        <input id="brand" placeholder="Brand" name="brand" type="text" required>
+                    </td>
+                    <td>
+                        <input id="model" placeholder="Model" name="model" type="text" required>
+                    </td>
+                    <td>
+                        <input id="os" placeholder="OS" name="os" required type="text">
+                    </td>
+                    <td>
+                        <input id="screensize" placeholder="Screen size in inch" name="screensize" type="number" min="0" step="1" required>
+                    </td>
+                    <td>
+                        <input id="modify_id" placeholder="id to modify" name="id" type="number">
+                    </td> 
+                    <td>
+                        <input id="image" placeholder="image" type="url" name="image">
+                        <input id="submit_button" type="submit">
+                        <button id="reset_button" type="button">Reset</button>
+                    </td>                                           
+                </tr>
+            </table>
+        </form>
+    </section>
+    <section id="buyers_guide">
+        <h1>Buyer's guide</h1>
+        <p>
+            When buying a new phone it is <strong>very</strong> important to know which aspects of the phone you should <em>really</em> pay attention to.
+            Below is a list of the most important aspects of a phone to take into consideration.
+        </p>
+        <ol>
+            <li>Battery</li>
+            <li>Memory</li>
+            <li>Camera</li>
+            <li>Processor</li>
+            <li>Display</li>
+            <li><abbr title="Operating System">OS</abbr></li>
+            <li>Cost</li>
+        </ol>
+    </section>
+    <section id="alternatives">
+        <h1>Alternatives</h1>
+        <p>
+            While looking for a new phone, you might be astonished by the price tags on some
+            of the current-gen flagship models. What if you're not willing to spend upwards of
+            &euro;800 on a new phone? If this is the case, then you've come to the right place.
+        </p>
+        <table id="alternatives_table">
+            <caption>
+                <p>The Specifications of the best budget buys</p>
+            </caption>
+            <tr>
+                <th sortable="yes" tabindex="0">Brand</th>
+                <th sortable="yes" tabindex="0">Model</th>
+                <th sortable="yes" tabindex="0">OS</th>
+                <th sortable="yes" tabindex="0">Screen Size</th>
+                <th sortable="yes" tabindex="0">Price</th>
+                <th sortable="yes" tabindex="0">Storage</th>
+                <th>Image</th>
+            </tr>
+            <tr>
+                <td>Samsung</td>
+                <td>a52s 5G</td>
+                <td>Android 11</td>
+                <td>6.5 inch</td>
+                <td>&euro;350</td>
+                <td>128GB</td>
+                <td>
+                    <img alt="" src="https://tweakers.net/i/5V_zbPHgsm_GThqCOzCuhFlrviA=/fit-in/188x141/filters:sharpen(0.5,0.1,false):fill(white):strip_exif()/i/2004543654.webp?f=thumblarge">
+                </td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>iPhone SE</td>
+                <td>iOS 15</td>
+                <td>4.7 inch</td>
+                <td>&euro;493</td>
+                <td>64GB</td>
+                <td>
+                    <img alt="" src="https://tweakers.net/i/khYM5NzUk3A0xBZ6MASD2w1U1VM=/fit-in/188x141/filters:fill(white):strip_exif()/i/2003539266.png?f=thumblarge">
+                </td>
+            </tr>
+            <tr>
+                <td>OnePlus</td>
+                <td>Nord 2 5G</td>
+                <td>Android 11</td>
+                <td>6.4 inch</td>
+                <td>&euro;379</td>
+                <td>128GB</td>
+                <td>
+                    <img alt="" src="https://tweakers.net/i/kDIejM4Z38DA9vPIt_WQeYCSlNg=/fit-in/188x141/filters:fill(white):strip_exif()/i/2004500304.png?f=thumblarge">
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="accesories">
+        <h1>Accesories</h1>
+        <p>
+            After you've bought your new phone, we advise you to also buy these
+            essential accesories to go along with your brand new device!
+        </p>
+        <ul id="accesories_list">
+            <li>Case</li>
+            <li>Screen protector</li>
+            <li>Headphones (wired or wireless)</li>
+            <li>Extra long charging cable</li>
+            <li>Wireless charger</li>
+        </ul>
+    </section>
+    <section id="glossary">
+        <h1>Glossary</h1>
+        <p>
+            While reading this site, you might have seen some words that you might not immediately know the meaning of. 
+            Worry not, for we have made a list of the most important terms and their definitions:
+        </p>
+        <dl>
+            <dt>os</dt>
+            <dd>
+                OS is short for operating system. An operating system is the software installed
+                on the phone's storage that enable your apps to communicate with the hardware of your phone.
+            </dd>
+            <dt>cpu</dt>
+            <dd>
+                The CPU (Central Processing Unit) is the brain of your smartphone.
+                    It handles all the instructions it receives from hardware and software running on the phone.
+            </dd>
+            <dt>ram</dt>
+            <dd>
+                RAM (Random Access Memory), also referred to as system memory is a type of memory that is ultra-fast
+                and is used to store the data of currently running applications.
+            </dd>
+        </dl>
+    </section>
+
+    <footer>
+        <pre>
+            Made by:
+            Nils Claessens 
+            Mireldar Movsum Zada.
+        </pre>
+        <ul id="contact_list">
+            <li>Email: N.H.Claessens@student.vu.nl</li>
+            <li>Email: M.Movsumzada@student.vu.nl</li>
+        </ul>
+    </footer>
+</body>
+</html>
+<!--
+    Browser compatibility report
+
+    By checking different browsers which were Google Chrome, Opera, Fire Fox, Internet Explorer and Microsoft Edge. 
+    We tested with all of them and website fully works, 
+    but in the internet explorer it wasn't as responsive as it should have been because of an older browser engine which were used in it.
+
+
+-->

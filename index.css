@@ -1,0 +1,347 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font: 16px sans-serif;
+    scroll-behavior: smooth;   
+}
+body section{
+    margin-right: 20px;
+}
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding-left: 20px;
+    background-color: white;
+}
+#logo_text{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+
+    background: linear-gradient(to right,#46FE5C, #049108);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    display: block;
+}
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 19px;
+    color: #049108;
+}
+#background-container{
+    background-image: url("https://cdn.vox-cdn.com/thumbor/H3aTeOWu4wP5VQWWO4Q8Cgk4r9o=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22755114/Google_Pixel_6__Portfolio_Shot.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+h1{
+    background: linear-gradient(to right,#049108, #46FE5C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 40px;
+    text-align: center;
+    font-variant: small-caps;
+}
+h2{
+    background: linear-gradient(to right,#049108, #46FE5C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+}
+p{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+abbr{
+    text-decoration: none;
+}
+#best_sellers{
+    padding-left: 20px;
+    scroll-margin-top: 70px;
+}
+#best_seller_list{
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: -40px;
+}
+#best_seller_list li{
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: box-shadow .4s ease-in-out;
+    transition: height .4s ease-in-out; 
+}
+#best_seller_list li:hover, #best_seller_list li:focus{
+    box-shadow:
+        2px 4px 4px lightgray,
+        3px 6px 6px lightgray,
+        4px 8px 8px lightgray;
+    transition: box-shadow .4s ease-in-out;
+    transition: height .4s ease-in-out; 
+    height: 270px;
+}
+#best_seller_list img{
+    object-fit: cover;
+    height: 140px;
+    width: 110px
+}
+.buy-button{
+    display: none;
+    background: linear-gradient(to right,#049108, #46FE5C);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.buy-button:link{
+    color:white
+}
+.buy-button:hover{
+    color: lightgray
+}
+.buy-button:active{
+    color: darkgray;
+}
+.buy-button:visited{
+    color:black
+}
+#best_seller_list li:hover .buy-button, #best_seller_list li:focus .buy-button{
+    display: inline-block;
+    position: inherit;
+    align-self: flex-end;
+    animation: .4s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+@keyframes fadeIn{
+    99% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    caption-side: top;
+    
+}
+table img{
+    object-fit: contain;
+    height: 140px;
+    width: 110px;
+}
+th{
+    background: #000;
+    color: white;
+    height: 50px;
+    cursor: pointer;
+}
+td{
+    vertical-align: center;
+}
+tr:nth-of-type(odd){
+    background: lightgray;
+}
+tr:nth-of-type(even){
+    background: #F6F6F6;
+}
+.delete_button{
+    width: 30px;
+    cursor: pointer;
+}
+#phone_form input{
+    width: 80%;
+}
+#phone_form input:focus{
+    outline-color: #049108;
+}
+#phone_form input[type="submit"], #reset_button{
+    width: 40%;
+}
+#buyers_guide{
+    scroll-margin-top: 70px;
+}
+#buyers_guide ol{
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style-position: inside;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#buyers_guide li{
+    width: 100px;
+    min-width: 100px;
+    margin: 10px 10px;
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent;
+    background-image: linear-gradient(white,white), linear-gradient(to right,#049108, #46FE5C);
+    background-origin: border-box;
+    background-clip: content-box, border-box;    
+}
+#alternatives{
+    padding-left: 20px;
+    scroll-margin-top: 70px;
+}
+#alternatives_table{
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+#accesories_list{
+    text-align: center;
+    list-style: inside url("https://cdn.discordapp.com/attachments/892141648241365083/931173108835045466/images.jpg");
+    margin-left: -70px;
+}
+#glossary{
+    padding-left: 20px;
+    scroll-margin-top: 70px;
+}
+dl{
+    text-align: center;
+}
+dt{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+dd{
+    margin: 0;
+    text-indent: 96px;
+    /*text indent is only here because it is mandatory, looks better without it*/
+    font-style: italic;
+}
+footer{
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    height: auto;    
+    background-color: lightgray;
+}
+footer pre{
+    display: block;
+    position: relative;
+    left: -40px;
+    width: 100%
+}
+#contact_list{
+    padding-bottom: 10px;
+    margin: 0;
+    list-style-position: inside;
+    list-style-image: url("https://cdn.discordapp.com/attachments/892141648241365083/931175689791619132/output-onlinepngtools.png");
+}
+
+@media screen and (max-width: 910px){
+    *{
+        scroll-margin-top: 0px !important;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        display: block;
+        position: static;
+        height: 260px;
+        padding: 0px 10px;
+        text-align: center;
+    }
+    #logo_text{
+        display: block;
+        margin: auto;
+    }
+    nav a{
+        display: block;
+        margin: 15px 0px;
+        width: 100%;
+    }
+    #best_seller_list{
+        display: flex;
+        overflow-x: auto;
+        padding: 0 10px;
+        margin: 0 10px;
+    }
+    #best_seller_list li{
+        margin: 10px;
+    }
+    #best_seller_list::-webkit-scrollbar{
+        display: none;
+    }
+    #buyers_guide li{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 600px){
+    table{
+        margin-right: 10px;
+    }
+    tr{
+        height: 40px;
+    }
+    table img{
+        object-fit:contain;
+        height: 80px;
+    }
+    th,td,tr{
+        all: unset;
+        display:block;
+    }
+    th, td{
+        padding: 10px;
+    }
+    th{
+        background-color: black;
+        color: white;
+    }
+}
+@media print{
+    body *{
+        color: #000 !important;
+        background-color: #fff;
+    }
+    header{
+        display: none;
+    }
+    h1{
+        page-break-before: always;
+    }
+    h1, h2{
+        background: unset;
+        -webkit-background-clip: unset;
+        background-clip: unset;
+        -webkit-text-fill-color: unset;
+    }
+    form input{
+        display: none;
+    }
+    p{
+        orphans: 3;
+        widows: 3;
+    }    
+    footer{
+        page-break-after: always;
+    }
+}

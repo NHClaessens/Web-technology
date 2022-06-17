@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ezphone documentation</title>
+</head>
+<body>
+    <header>
+        <h1>Web API ezphone</h1>
+    </header>
+    <section id="intro">
+        <p></p>
+    </section>
+    <section id="requests">
+        <table id="requests table" style="border-spacing: 10px;">
+            <caption>
+                <p><strong style="font-size: 20px;">Requests</strong></p>
+            </caption>
+            <tr>
+                <th>Method</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>Retrieve product information</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>Add new product information</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>Update product information</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>Delete product information</td>
+            </tr>
+        </table>
+    </section>
+    <section id="example of requests with the status codes">
+        <table id="example of requests with the status codes table" style="border-spacing: 10px;">
+            <caption>
+                <p><strong style="font-size: 20px;">Example of requests with the status code</strong></p>
+                <p><strong style="font-size: 15px;">(Responses and Requests will always provide in the JSON format)</strong></p>
+            </caption>
+            <tr>
+                <th>Requests</th>
+                <th>Status Code</th>
+                <th>Description</th>
+                <th>URI Example</th>
+                <th>Request BODY Example</th>
+                <th>Response BODY Example</th>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>200</td>
+                <td>OK</td>
+                <td><code>http://localhost.3000/ID/1 <br>
+                          http://localhost.3000/ (get all)</code></td>
+                <td><pre>
+                {} (Empty)
+                </pre></td>
+                <td><pre>
+                {
+                    "id": 1,
+                    "brand": "Fairphone",
+                    "model": "FP3",
+                    "os": "Android",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+                    "screensize": 5.65
+                }</pre></td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>201</td>
+                <td>Created</td>
+                <td><code>http://localhost.3000/ADD</code></td>
+                <td><pre>
+                { 
+                    "brand": "Apple",
+                    "model": "Iphone SE",
+                    "os": "IOS 15",
+                    "image": "https://tweakers.net/i/khYM5NzUk3A0xBZ6MASD2w1U1VM=/fit-in/188x141/filters:fill(white):strip_exif()/i/2003539266.png?f=thumblarge",
+                    "screensize": "4.7"
+                }</pre></td>
+                <td><pre>
+                {} (status code:201)
+                </pre></td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>204</td>
+                <td>No Content</td>
+                <td><code>http://localhost.3000/UPDATE/2</code></td>
+                <td><pre>
+                {
+                    "id": 2,
+                    "brand": "samsung",
+                    "model": "galaxy s21",
+                    "os": "Android",
+                    "image": "https://media.router-switch.com/media/catalog/product/cache/b90fceee6a5fa7acd36a04c7b968181c/s/a/samsung-galaxy-s21-5g-sm-g9910.jpg",
+                    "screensize": "6.2"
+                }</pre></td>
+                <td><pre>
+                {} (status code:204)
+                </pre></td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>204</td>
+                <td>No Content</td>
+                <td><code>http://localhost.3000/DELETE/1 <br>
+                          http://localhost.3000/DELETE/ (delete all)</code></td>
+                <td><pre>
+                {} (Empty)
+                </pre></td>
+                <td><pre>
+                {} (status code:204)
+                </pre></td>
+            </tr>
+            <tr>
+                <td>POST and PUT</td>
+                <td>400</td>
+                <td>Invalid input</td>
+                <td><code>http://localhost.3000/ADD <br>
+                          http://localhost.3000/UPDATE</code></td>
+                <td><pre>
+                {
+                    "id": 2,
+                    "brand": "samsung",
+                    "model": "galaxy s21",
+                    "os": "Android",
+                    "image": "https://media.router-switch.com/media/catalog/product/cache/b90fceee6a5fa7acd36a04c7b968181c/s/a/samsung-galaxy-s21-5g-sm-g9910.jpg",
+                    "screensize": "not a number"
+                }</pre></td>
+                <td><pre>
+                {
+                    "error": "400: Invalid input"
+                }</pre></td>
+            </tr>
+            <tr>
+                <td>POST and PUT</td>
+                <td>500</td>
+                <td>Error</td>
+                <td><code>http://localhost.3000/ADD <br>
+                          http://localhost.3000/UPDATE</code></td>
+                <td><pre>
+                {
+                    "invalid-key": "invalid-value"
+                }</pre></td>
+                <td><pre>
+                {
+                    "error": "500: Internal server error"
+                }</pre></td>
+            </tr>
+        </table>
+    </section>
+    <section id="URIs and IDs">
+        <table id="URIs and IDs table" style="border-spacing: 10px;">
+            <caption>
+                <p><strong style="font-size: 20px;">URIs and IDs</strong></p>
+            </caption>
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>Product ID</td>
+                <td>In our data base each product which we mention will have their <br>
+                own product ID which will be generated automatically</td>
+                <td>ID/1</td>
+            </tr>
+        </table>
+    </section>
+    <section id="Responses">
+        <caption>
+            <p><strong style="font-size: 20px;">Responses</strong></p>
+        </caption>
+        <p>Web API requests and responses will always be in JSON format.</p>
+    </section>
+    <section id="response status code">
+        <caption>
+            <p><strong style="font-size: 20px;">Response Status Code</strong></p>
+        </caption>
+        <table id="response status code table" style="border-spacing: 10px;">
+            <tr>
+                <th>Status Code</th>
+                <th>Description</th>
+                <th>Methods </th>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>Indicates that the request has succeeded</td>
+                <td>GET, POST, PUT, DELETE</td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>Indicates that the request has succeeded and a new resource <br>
+                    has been created as a result</td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>204</td>
+                <td>The server has fulfilled the request but does not need to return a <br>
+                    response body. The server may return the updated meta information.</td>
+                <td>PUT, DELETE</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>The request could not be understood by the server due to incorrect syntax. <br>
+                    The client SHOULD NOT repeat the request without modifications.</td>
+                <td>GET, POST, PUT, DELETE</td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>The server can not find the requested resource.</td>
+                <td>GET, PUT, DELETE</td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>The server encountered an unexpected condition that prevented it from <br>
+                    fulfilling the request.</td>
+                <td>GET, POST, PUT, DELETE</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
